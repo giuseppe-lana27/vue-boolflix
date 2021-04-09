@@ -22,8 +22,8 @@
             <img src="https://fontmeme.com/permalink/210409/4937b74c6317b36c509baa13669b4b20.png" alt="Boolflix logo">
           </div>
           <div class="search-bar">
-            <input type="text" placeholder="Inserisci titolo" v-model="filmTitle" @keydown.13="searchFilm">
-            <button @click="searchFilm">Ricerca</button>
+            <input type="text" placeholder="Inserisci titolo" class="search" v-model="filmTitle" @keydown.13="searchFilm">
+            <button class="search-btn" @click="searchFilm">Ricerca</button>
           </div>
         </div>
       </header>
@@ -38,6 +38,7 @@
               <h3>Titolo:</h3><span>{{film.title}}</span>
               <h3 class="original-title">Titolo Originale:</h3><span>{{film.original_title}}</span>
               <h3 class="overview">Overview:</h3><span>{{film.overview}}</span>
+              <h4 class="vote">Voto:</h4><span>{{film.vote_average}}</span>
             </div>
           </div>
         </div>

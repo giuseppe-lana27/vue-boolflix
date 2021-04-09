@@ -10,7 +10,6 @@ body{
 }
 /* header */
 .container{
-  height: 100px;
   background-color: #000;
   display: flex;
   align-items: center;
@@ -22,6 +21,22 @@ body{
 }
 .search-bar{
   padding: 10px;
+}
+.search{
+  width: 250px;
+  padding: 6px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 10px;
+}
+.search:focus{
+  outline: none;
+}
+.search-btn{
+  padding: 8px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 10px;
 }
 /* main */
 .films-container{
@@ -35,11 +50,13 @@ body{
   height: 300px;
   width: 200px;
   background-color: #000;
+  border: 1px solid #fff;
   margin: 20px 20px;
   position: relative;
   overflow: auto;
   scroll-behavior: smooth;
 }
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -57,7 +74,7 @@ body{
   left: 0;
   color: #fff;
 }
-.description .overview{
+.overview{
   margin-top: 10px;
 }
 .film:hover .film-img{
@@ -67,5 +84,8 @@ body{
   opacity: 1;
 }
 .original-title {
+  margin-top: 10px;
+}
+.vote{
   margin-top: 10px;
 }
