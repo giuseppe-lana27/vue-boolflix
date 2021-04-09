@@ -24,7 +24,7 @@ body{
 }
 .search{
   width: 250px;
-  padding: 6px;
+  padding: 8px;
   margin-right: 20px;
   border: none;
   border-radius: 10px;
@@ -64,23 +64,30 @@ body{
 .film-img{
   max-width: 100%;
   transition: 1s all;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 .description{
-  padding: 5px;
+  width: 100%;
+  padding: 10px;
   opacity: 0;
   transition: 1s all;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100%;
+  z-index: 20;
   color: #fff;
 }
 .overview{
   margin-top: 10px;
 }
 .film:hover .film-img{
-  opacity: 0;
+  opacity: 0.3;
 }
 .film:hover .description{
+  left: 0;
   opacity: 1;
 }
 .original-title {
