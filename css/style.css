@@ -37,6 +37,12 @@ body{
   background-color: #000;
   margin: 20px 20px;
   position: relative;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 .film-img{
   max-width: 100%;
@@ -50,18 +56,16 @@ body{
   top: 0;
   left: 0;
   color: #fff;
-  overflow: hidden;
 }
 .description .overview{
-  overflow-y: auto;
+  margin-top: 10px;
 }
 .film:hover .film-img{
   opacity: 0;
 }
 .film:hover .description{
   opacity: 1;
-
 }
-.original-title{
-  margin: 10px 0;
+.original-title {
+  margin-top: 10px;
 }
