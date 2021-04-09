@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- vuejs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- /vuejs -->
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <!-- /axios -->
     <link rel="stylesheet" href="css/style.css">
     <title>Boolflix</title>
   </head>
   <body>
     <div id="app">
+      <!-- intestazione pagina -->
       <header>
         <div class="container">
           <div class="logo">
@@ -19,11 +26,26 @@
             <button>Ricerca</button>
           </div>
         </div>
-
       </header>
+      <!-- /intestazione pagina -->
+      <!-- corpo pagina -->
       <main>
-
+        <!-- sezione visualizzazione film -->
+        <div class="films-container">
+          <div class="film">
+            <img src="https://image.tmdb.org/t/p/w400/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="" class="film-img">
+            <div class="description">
+              <h3>Titolo:</h3>
+              <h3 class="original-title">Titolo Originale:</h3>
+              <h3>Overwiev:</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+        </div>
+        <!-- sezione visualizzazione film -->
       </main>
+      <!-- /corpo pagina -->
     </div>
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
