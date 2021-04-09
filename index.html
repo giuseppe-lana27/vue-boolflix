@@ -19,11 +19,11 @@
       <header>
         <div class="container">
           <div class="logo">
-            <h1>BOOLFLIX</h1>
+            <img src="https://fontmeme.com/permalink/210409/4937b74c6317b36c509baa13669b4b20.png" alt="Boolflix logo">
           </div>
           <div class="search-bar">
-            <input type="text" name="" value="">
-            <button>Ricerca</button>
+            <input type="text" placeholder="Inserisci titolo" v-model="filmTitle" @keydown.13="searchFilm">
+            <button @click="searchFilm">Ricerca</button>
           </div>
         </div>
       </header>
@@ -32,13 +32,12 @@
       <main>
         <!-- sezione visualizzazione film -->
         <div class="films-container">
-          <div class="film">
-            <img src="https://image.tmdb.org/t/p/w400/1J1e8Uslw8MAE7mIVFh6TU9mPt8.jpg" alt="" class="film-img">
+          <div class="film" v-for="film in films">
+            <img :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="" class="film-img">
             <div class="description">
-              <h3>Titolo:</h3>
-              <h3 class="original-title">Titolo Originale:</h3>
-              <h3>Overwiev:</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h3>Titolo:</h3><span>{{film.title}}</span>
+              <h3 class="original-title">Titolo Originale:</h3><span>{{film.original_title}}</span>
+              <h3>Overview:</h3><span  class="overview">{{film.overview}}</span>
             </div>
           </div>
         </div>

@@ -28,13 +28,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 25px;
 }
 .film{
   height: 300px;
   width: 200px;
   background-color: #000;
-  overflow: hidden;
   margin: 20px 20px;
   position: relative;
 }
@@ -50,12 +50,17 @@ body{
   top: 0;
   left: 0;
   color: #fff;
+  overflow: hidden;
+}
+.description .overview{
+  overflow-y: auto;
 }
 .film:hover .film-img{
   opacity: 0;
 }
 .film:hover .description{
   opacity: 1;
+
 }
 .original-title{
   margin: 10px 0;
