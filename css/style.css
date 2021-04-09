@@ -1,0 +1,24 @@
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* mix */
+body{
+
+}
+.container{
+  height: 100px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  color: red;
+  padding: 10px;
+}
+.search-bar{
+  padding: 10px;
+}
