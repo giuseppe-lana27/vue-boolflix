@@ -42,14 +42,16 @@ body{
   outline: none;
 }
 /* main */
-.films-container{
+.films-container,
+.series-container{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 25px;
 }
-.film{
+.film,
+.show{
   height: 300px;
   width: 200px;
   background-color: #000;
@@ -63,7 +65,7 @@ body{
   width: 0px;
   background: transparent;
 }
-.film-img{
+.poster{
   max-width: 100%;
   transition: 1s all;
   position: sticky;
@@ -86,11 +88,13 @@ body{
 .overview{
   margin-top: 10px;
 }
-.film:hover .film-img{
+.film:hover .poster,
+.show:hover .poster{
   opacity: 0.3;
   cursor: pointer;
 }
-.film:hover .description{
+.film:hover .description,
+.show:hover .description{
   left: 0;
   opacity: 1;
 }

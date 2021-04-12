@@ -25,7 +25,7 @@
             <img src="https://fontmeme.com/permalink/210409/4937b74c6317b36c509baa13669b4b20.png" alt="Boolflix logo">
           </div>
           <div class="search-bar">
-            <input type="text" placeholder="Inserisci titolo" class="search" v-model="filmTitle" @keydown.13="searchFilm">
+            <input type="text" placeholder="Inserisci titolo" class="search" v-model="search" @keydown.13="searchFilm">
             <button class="search-btn" @click="searchFilm">Ricerca</button>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <!-- sezione visualizzazione film -->
         <div class="films-container">
           <div class="film" v-for="film in films">
-            <img :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="" class="film-img">
+            <img :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="" class="poster">
             <div class="description">
               <h3>Titolo:</h3><span>{{film.title}}</span>
               <h3 class="original-title">Titolo Originale:</h3><span>{{film.original_title}}</span>
@@ -46,6 +46,19 @@
           </div>
         </div>
         <!-- sezione visualizzazione film -->
+        <!-- sezione visualizzazione serie TV -->
+        <div class="series-container">
+          <div class="show" v-for="show in tvShows">
+            <img :src=" 'https://image.tmdb.org/t/p/w300' + show.poster_path" alt="" class="poster">
+            <div class="description">
+              <h3>Titolo:</h3><span>{{show.name}}</span>
+              <h3 class="original-title">Titolo Originale:</h3><span>{{show.original_name}}</span>
+              <h4 class="vote">Voto:</h4><i class="fas fa-star vote-star" v-for="item in show.vote_average"></i>
+              <h3 class="overview">Overview:</h3><span>{{show.overview}}</span>
+            </div>
+          </div>
+        </div>
+        <!-- /sezione visualizzazione serie TV -->
       </main>
       <!-- /corpo pagina -->
     </div>
