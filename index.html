@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- /font awesome -->
     <!-- vuejs -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- /vuejs -->
@@ -37,8 +40,8 @@
             <div class="description">
               <h3>Titolo:</h3><span>{{film.title}}</span>
               <h3 class="original-title">Titolo Originale:</h3><span>{{film.original_title}}</span>
+              <h4 class="vote">Voto:</h4><i class="fas fa-star vote-star" v-for="item in film.vote_average"></i>
               <h3 class="overview">Overview:</h3><span>{{film.overview}}</span>
-              <h4 class="vote">Voto:</h4><span>{{film.vote_average}}</span>
             </div>
           </div>
         </div>

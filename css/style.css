@@ -38,6 +38,9 @@ body{
   border: none;
   border-radius: 10px;
 }
+.search-btn:focus{
+  outline: none;
+}
 /* main */
 .films-container{
   display: flex;
@@ -56,7 +59,6 @@ body{
   overflow: auto;
   scroll-behavior: smooth;
 }
-
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -67,6 +69,7 @@ body{
   position: sticky;
   top: 0;
   left: 0;
+  bottom: 0;
   z-index: 10;
 }
 .description{
@@ -85,6 +88,7 @@ body{
 }
 .film:hover .film-img{
   opacity: 0.3;
+  cursor: pointer;
 }
 .film:hover .description{
   left: 0;
@@ -95,4 +99,8 @@ body{
 }
 .vote{
   margin-top: 10px;
+}
+.vote-star{
+  color: yellow;
+  margin-right: 5px;
 }

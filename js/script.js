@@ -15,10 +15,13 @@ var app = new Vue(
           }
         })
         .then((risposta) =>{
-          // console.log(risposta.data);
-          this.films = risposta.data.results;
-          // console.log(this.films);
+          this.films = risposta.data.results;          
           this.filmTitle = '';
+          // calcolo del voto arrotondato per eccesso
+          for (var i = 0; i < this.films.length; i++){
+            this.films[i].vote_average = Math.ceil(this.films[i].vote_average / 2);
+
+          }
         })
       }
     }
