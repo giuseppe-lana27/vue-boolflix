@@ -98,12 +98,12 @@ body{
   left: 0;
   opacity: 1;
 }
-.original-title {
-  margin-top: 10px;
-}
+.original-title,
+.language,
 .vote{
   margin-top: 10px;
 }
+
 .vote-star{
   color: yellow;
   margin-right: 5px;
