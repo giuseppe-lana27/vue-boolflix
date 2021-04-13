@@ -34,31 +34,59 @@
       <!-- corpo pagina -->
       <main>
         <!-- sezione visualizzazione film -->
+        <h2 v-if="films.length" class="section-title">Film corrispondenti alla ricerca:</h2>
         <div class="films-container">
           <div class="film" v-for="film in films">
             <img :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="" class="poster">
             <p v-show="film.poster_path == null" class="img-err">Poster non disponibile</p>
             <div class="description">
-              <h3>Titolo:</h3><span>{{film.title}}</span>
-              <h3 class="original-title">Titolo Originale:</h3><span>{{film.original_title}}</span>
-              <h3 class="language">Lingua:</h3><img :src="'img/' +film.original_language + '.png'" alt="Language" class="language-flag">
-              <h4 class="vote" v-if="film.vote_average != '' ">Voto:</h4><i class="fas fa-star vote-star" v-for="item in film.vote_average"></i>
-              <h3 class="overview" v-if="film.overview != ''">Overview:</h3><span>{{film.overview}}</span>
+              <div class="film-title">
+                <h3>Titolo:</h3>
+                <span>{{film.title}}</span>
+                <h3 class="original-title">Titolo Originale:</h3><span>{{film.original_title}}</span>
+              </div>
+              <div class="film-lang">
+                <h3 class="language">Lingua:</h3>
+                <img :src="'img/' +film.original_language + '.png'" alt="Language" class="language-flag">
+              </div>
+              <div class="film-vote" v-if="film.vote_average != '' ">
+                <h4 class="vote">Voto:</h4>
+                <i class="fas fa-star vote-star" v-for="item in film.vote_average"></i>
+                <i class="far fa-star empty-star" v-for="item in 5-film.vote_average"></i>
+              </div>
+              <div class="film-overview">
+                <h3 class="overview" v-if="film.overview != ''">Overview:</h3>
+                <span>{{film.overview}}</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- sezione visualizzazione film -->
         <!-- sezione visualizzazione serie TV -->
+        <h2 v-if="tvShows.length" class="section-title">Serie Tv corrispondenti alla ricerca:</h2>
         <div class="series-container">
           <div class="show" v-for="show in tvShows">
             <img :src=" 'https://image.tmdb.org/t/p/w300' + show.poster_path" alt="" class="poster">
             <p v-show="show.poster_path == null" class="img-err">Poster non disponibile</p>
             <div class="description">
-              <h3>Titolo:</h3><span>{{show.name}}</span>
-              <h3 class="original-title">Titolo Originale:</h3><span>{{show.original_name}}</span>
-              <h3 class="language">Lingua:</h3><img :src="'img/' +show.original_language + '.png'" alt="Language" class="language-flag">
-              <h4 class="vote" v-if="show.vote_average != '' ">Voto:</h4><i class="fas fa-star vote-star" v-for="item in show.vote_average"></i>
-              <h3 class="overview" v-if="show.overview != ''">Overview:</h3><span>{{show.overview}}</span>
+              <div class="show-title">
+                <h3>Titolo:</h3>
+                <span>{{show.name}}</span>
+                <h3 class="original-title">Titolo Originale:</h3>
+                <span>{{show.original_name}}</span>
+              </div>
+              <div class="show-language">
+                <h3 class="language">Lingua:</h3>
+                <img :src="'img/' +show.original_language + '.png'" alt="Language" class="language-flag">
+              </div>
+              <div class="show-vote" v-if="show.vote_average != '' ">
+                <h4 class="vote">Voto:</h4>
+                <i class="fas fa-star vote-star" v-for="item in show.vote_average"></i>
+                <i class="far fa-star empty-star" v-for="item in 5-show.vote_average"></i>
+              </div>
+              <div class="show-overview">
+                <h3 class="overview" v-if="show.overview != ''">Overview:</h3><span>{{show.overview}}</span>
+              </div>
             </div>
           </div>
         </div>

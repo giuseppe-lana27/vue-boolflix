@@ -37,11 +37,20 @@ body{
   margin-right: 20px;
   border: none;
   border-radius: 10px;
+  background-color: red;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .search-btn:focus{
   outline: none;
 }
 /* main */
+.section-title{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 25px;
+}
 .films-container,
 .series-container{
   display: flex;
@@ -116,8 +125,11 @@ body{
 .vote{
   margin-top: 10px;
 }
-
 .vote-star{
   color: yellow;
   margin-right: 5px;
+}
+.empty-star{
+  margin-right: 5px;
+  margin-left: -5px;
 }
