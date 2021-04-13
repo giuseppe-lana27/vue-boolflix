@@ -74,6 +74,11 @@ body{
   bottom: 0;
   z-index: 10;
 }
+.img-err{
+  color: #fff;
+  text-align: center;
+  transition: 1s;
+}
 .description{
   width: 100%;
   padding: 10px;
@@ -95,6 +100,11 @@ body{
 .show:hover .poster{
   opacity: 0.3;
   cursor: pointer;
+}
+.film:hover .img-err,
+.show:hover .img-err{
+  opacity: 0.1;
+
 }
 .film:hover .description,
 .show:hover .description{

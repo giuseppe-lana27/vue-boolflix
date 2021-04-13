@@ -37,11 +37,12 @@
         <div class="films-container">
           <div class="film" v-for="film in films">
             <img :src=" 'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="" class="poster">
+            <p v-show="film.poster_path == null" class="img-err">Poster non disponibile</p>
             <div class="description">
               <h3>Titolo:</h3><span>{{film.title}}</span>
               <h3 class="original-title">Titolo Originale:</h3><span>{{film.original_title}}</span>
               <h3 class="language">Lingua:</h3><img :src="'img/' +film.original_language + '.png'" alt="Language" class="language-flag">
-              <h4 class="vote">Voto:</h4><i class="fas fa-star vote-star" v-for="item in film.vote_average"></i>
+              <h4 class="vote" v-if="film.vote_average != '' ">Voto:</h4><i class="fas fa-star vote-star" v-for="item in film.vote_average"></i>
               <h3 class="overview" v-if="film.overview != ''">Overview:</h3><span>{{film.overview}}</span>
             </div>
           </div>
@@ -51,11 +52,12 @@
         <div class="series-container">
           <div class="show" v-for="show in tvShows">
             <img :src=" 'https://image.tmdb.org/t/p/w300' + show.poster_path" alt="" class="poster">
+            <p v-show="show.poster_path == null" class="img-err">Poster non disponibile</p>
             <div class="description">
               <h3>Titolo:</h3><span>{{show.name}}</span>
               <h3 class="original-title">Titolo Originale:</h3><span>{{show.original_name}}</span>
               <h3 class="language">Lingua:</h3><img :src="'img/' +show.original_language + '.png'" alt="Language" class="language-flag">
-              <h4 class="vote">Voto:</h4><i class="fas fa-star vote-star" v-for="item in show.vote_average"></i>
+              <h4 class="vote" v-if="show.vote_average != '' ">Voto:</h4><i class="fas fa-star vote-star" v-for="item in show.vote_average"></i>
               <h3 class="overview" v-if="show.overview != ''">Overview:</h3><span>{{show.overview}}</span>
             </div>
           </div>

@@ -4,7 +4,7 @@ var app = new Vue(
     data:{
       films: [],
       search: '',
-      tvShows: [],
+      tvShows: [],      
     },
     methods:{
       searchFilm: function(){
@@ -37,6 +37,6 @@ var app = new Vue(
           }
         })
         this.search = '';
-      },      
+      },
     }
 });
