@@ -85,6 +85,9 @@ body{
   z-index: 20;
   color: #fff;
 }
+.language-flag{
+  height: 30px;
+}
 .overview{
   margin-top: 10px;
 }
