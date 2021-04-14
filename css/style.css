@@ -4,9 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* mix */
 body{
   background-color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 /* header */
 .container{
@@ -98,6 +98,7 @@ body{
   left: 100%;
   z-index: 20;
   color: #fff;
+  text-align: center;
 }
 .language-flag{
   height: 30px;
@@ -113,7 +114,6 @@ body{
 .film:hover .img-err,
 .show:hover .img-err{
   opacity: 0.1;
-
 }
 .film:hover .description,
 .show:hover .description{
@@ -130,5 +130,5 @@ body{
   margin-right: 5px;
 }
 .empty-star{
-  margin-right: 5px;  
+  margin-right: 5px;
 }
